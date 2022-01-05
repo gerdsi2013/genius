@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --color-primary:  #000000;
+    --color-background:#e7e7e7;
+    --color-red:#ff0000;
+    --color-blue:#0000ff;
+    --color-green: #008000;
+    --color-green-score:#9acd32;
+    --color-yellow:#ffff00;
+    --color-white:#ffffff;
+    
+}
+
+body {
+  background: var(--color-background);
+  
+}
+
+.container-main {
+  height: 100vh;
+  max-height: 900px;
+  max-width: 1200px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.genius {
+  display: grid;
+  grid-template-areas: "verde vermelho" "amarelo azul";
+  grid-gap: 15px;
+  border: 15px solid var(--color-primary);
+  background: var(--color-primary);
+  border-radius: 100%;
+  width: 600px;
+  height: 600px;
+}
+.play-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  position: absolute;
+  overflow: hidden;
+  display: grid;
+}
+.play-top {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-primary);
+}
+
+.play-botton button {
+  width: 100%;
+  height: 100%;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+
+}
+
+.blue {
+  grid-area: azul;
+  background-color: var(--color-blue);
+  border-bottom-right-radius: 100%;
+}
+.red {
+  grid-area: vermelho;
+  background-color: var(--color-red);
+  border-top-right-radius: 100%;
+}
+.yellow {
+  grid-area: amarelo;
+  background-color: var(--color-yellow);
+  border-bottom-left-radius: 100%;
+}
+
+.green {
+  grid-area: verde;
+  background-color: var(--color-green);
+  border-top-left-radius: 100%;
+}
+
+.selected {
+  opacity: 0.2;
+}
+
+.style-score {
+  color: var(--color-white);
+  font-size: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h3 {
+  color: var(--color-background);
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+ p.score {
+    font-size: 2rem;
+    color: var(--color-green-score) ;
+    text-align: center;
+}
